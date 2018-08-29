@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config />
+
+    <!-- Scope demo Bean -->
+
+    <bean id="hello" class="com.ramendu.a_scopesDemo.Hello" scope="prototype" />
+
+    <!-- Bean Life cycle methods demo -->
+
+    <bean id="beanLifeCycle" class="com.ramendu.b_beanLifecyleDemo.BeanWithLifecycle" init-method="init" destroy-method="destroy"/>
+
+    <!-- Bean with BeanPostProcessor -->
+
+    <bean id="helloProcessor" class="com.ramendu.c_postProcessor.Hello" init-method="init" destroy-method="destroy">
+        <property name="message" value="Hello World!!"/>
+    </bean>
+
+    <!-- Beans for the Answers -->
+
+    <bean id="ansOne" class="com.ramendu.d_ciCollection.Answer" >
+        <constructor-arg value="1"/>
+        <constructor-arg value="India is capital of Delhi" />
+        <constructor-arg value="Ramendu" />
+    </bean>
+
+    <bean id="ansTwo" class="com.ramendu.d_ciCollection.Answer">
+        <constructor-arg value="2"/>
+        <constructor-arg value="Pakistan is toilet" />
+        <constructor-arg value="MD Zinna" />
+    </bean>
+
+    <!-- Bean for the question -->
+    <bean id="question" class="com.ramendu.d_ciCollection.Question">
+        <constructor-arg value="Question One" />
+        <constructor-arg value="Good Question" />
+        <constructor-arg>
+            <list>
+                <ref bean="ansOne" />
+                <ref bean="ansTwo" />
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <!-- In case of CI for map we can do like below -->
+    <!--
+    <constructor-arg>
+        <map>
+            <entry key-ref="beanId" value-ref="beanId" />
+            <entry key-ref="beanId" value-ref="beanId" />
+            <entry key-ref="beanId" value-ref="beanId" />
+            ....
+        </map>
+    </constructor-arg>
+    -->
+
+    <!-- Bean for SpellChecker -->
+
+    <bean id="spellChecker" class="com.ramendu.e_byName.SpellChecker" />
+
+    <!-- Bean for Text editor -->
+    <bean id="textEditor" class="com.ramendu.e_byName.TextEditor" autowire="byName">
+        <property name="name" value="Generic Text Editor" />
+    </bean>
+
+    <!-- In case of byType id would SpellChecker and this id bean will be injected -->
+
+    <!-- In case of constructor it's same as byType but instead of <property> <constructor-arg> is used -->
+
+
+</beans>

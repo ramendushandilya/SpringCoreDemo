@@ -1,0 +1,12 @@
+* There are two variants of DI provided in Spring
+
+    1. Constructor Based DI
+    Constructor based DI is accomplished when the container invokes a class constructor with a number of arguments
+    each representing a dependency on the other class
+
+    2. Setter Based DI
+    Setter based DI is accomplished when the container calls the setter method on your beans after invoking a no-arg
+    constructor or no arg static factory method to instantiate the bean
+
+* We can mix match both the Setter and DI injection, but it is a good rule of thumb to use constructor args for mandatory
+dependencies and setters for optional dependencies

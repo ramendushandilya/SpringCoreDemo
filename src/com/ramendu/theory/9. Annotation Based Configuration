@@ -1,0 +1,13 @@
+*. Available starting from Spring 2.5
+
+*. Annotation injection is performed before XML configuration, thus XML configuration will override behavior if both
+are done
+
+*. <context:annotation-config/> should be used to enable annotation configuration
+
+*. Few important annotations
+
+    1. @Required
+    2. @Autowired
+    3. @Qualifier
+    4. JSR-250 annotations

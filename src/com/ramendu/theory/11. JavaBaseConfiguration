@@ -1,0 +1,13 @@
+*. @Configuration
+
+    Annotating a class with @Configuration indicates that the class can be used by the Spring IOC container as a source
+    of bean definitions.
+
+*. @Bean
+
+    The @Bean annotation tells spring that a method annotated with @Bean will return an object that should be registered
+    as a bean in the Spring application context.
+
+*. The configuration class can have more than one bean definition
+
+*.

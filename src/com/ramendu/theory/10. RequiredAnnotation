@@ -1,0 +1,13 @@
+*. The @Required annotation applies to Bean property setter methods and it indicates that the affected property must
+be populated in XML configuration.
+
+*. @Autowired you know it, can be done on both setter and constructor
+
+*. If more than one beans found use @Qualifier along with @Autowired to remove confusion
+
+@Autowired
+@Qualifier("studentOne")
+private Student student;
+
+Here, if more than one student beans are found, then bean with id, studentOne is autowired
+

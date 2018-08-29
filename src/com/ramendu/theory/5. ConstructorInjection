@@ -1,0 +1,4 @@
+* We can inject dependency by constructor. The <constructor-arg> sub element of <bean> is used for CI.
+
+* We can inject Primitives, Dependent Objects, Maps, Collection etc.
+

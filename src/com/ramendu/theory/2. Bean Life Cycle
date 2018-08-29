@@ -1,0 +1,6 @@
+* To define setup and teardown for a bean we simple declare the <bean> with initmethod and destroymethod parameters
+
+* The init-method attribute specifies a method that is to be called on the bean immediately upon instantiation
+
+* The destroy-method attribute specifies a method that is to be called on the bean immediately after destruction
+

@@ -1,0 +1,25 @@
+*. The Spring container can also autowire relationships between collaborating beans without using <constructor-arg>
+and <property> tags
+
+*. We can use "autowire" attribute of the bean tag to specify autowire mode for a bean definition
+
+*. Below are the autowire modes
+
+    1. no
+    This is the default setting which means no autowiring and we need to do it explicitly
+
+    2. byName
+    Spring container looks at the properties of the beans on which autowire is set to "byName" in the XML configuration
+    file. It then tries to match and wire its properties with beans defined in the configuration file
+
+    3. byType
+    Spring container looks at the properties of the beans on which autowire mode is set to "byType" in the XML config
+    file. It then tries to match and wire a property if its type matches exactly with one of the beans name in config
+    file. If more than one such bean is found exception is thrown
+
+    4. constructor
+    Similar to byType but applies to constructor arguments.
+
+    5. autoDetect
+    Spring first tries to autowire by constructor, if it doesn't work then it's done by type
+

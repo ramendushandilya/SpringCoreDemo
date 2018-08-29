@@ -1,0 +1,19 @@
+*. Following five scopes are supported
+
+    1. singleton
+    Single instance per Spring IOC container, it's default scope
+
+    2. prototype
+    Allows to have any number of object instances
+
+    3. request
+    Scopes a bean to an HTTP request only
+
+    4. session
+    Scopes a bean to an HTTP session
+
+    5. global-session
+    Scopes a bean to a global HTTP session
+
+    3 to 5 are valid only in the context of web aware Spring ApplicationContext container
+

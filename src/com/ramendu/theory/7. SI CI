@@ -1,0 +1,10 @@
+* Difference between SI and CI
+
+* Partial Dependency can be injected using SI, but it's not possible by CI
+
+* SI overrides the CI, if we used both IOC will use SI
+
+* We can easily change the value by setter injection, it doesn't create a new bean instance always like CI
+
+* SI is flexible than CI
+

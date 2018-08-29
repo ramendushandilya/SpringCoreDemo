@@ -1,0 +1,4 @@
+*. The BeanPostProcessor interface defines callback methods that you can implement to provide your own instantiation
+logic, DI logic etc. We can also implement some custom logic after the spring container finishes instantiating,
+configuring and initialising a bean by plugging in one or more BeanPostProcessor implementations.
+

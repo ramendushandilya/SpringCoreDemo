@@ -1,0 +1,48 @@
+*. The Spring container is at the core of the spring framework. The container will create the objects, wire them
+together, configure them, and manage their complete lifecycle from creation till destruction.
+
+*. The Spring container uses DI to manage the components that make up an application. These objects are called beans.
+
+*. The container gets its instructions on what objects to instantiate, configure and assemble by reading the configuration
+metadata provided.
+
+*. The configuration metadata can be represented either by XML, Java annotations or Java code.
+
+*. Spring provide two distinct types of containers
+
+    1. BeanFactoryContainer
+    This is the simplest container providing the basic support for DI
+
+    2. ApplicationContext
+    This container adds more enterprise specific functionality
+    This contains all the functionality of BeanFactory container so it is generally recommended over BeanFactory
+
+*. Property and description of Bean metadata
+
+    1. class
+    This attribute is mandatory and specifies the bean class to be used to create the bean
+
+    2. name
+    This attribute specifies the bean identifier uniquely. In XML based configuration id/name attribute is used to
+    specify the bean identifier
+
+    3. scope
+    This attribute specifies the scope of the objects created from a particular bean definition
+
+    4. properties
+    This is used to inject the dependencies
+
+    5. autowiring mode
+    Used to inject dependencies
+
+    6. lazy initialisation mode
+    It tells the container to create a bean when it is first requested, rather than at the startup
+
+    7. constructor-arg
+    This is used to inject the dependencies
+
+    8. initialisation method
+    A callback to be called just after all necessary properties on the bean have been set by the container
+
+    9. destruction method
+    A callback to be called when the container containing the bean is destroyed
